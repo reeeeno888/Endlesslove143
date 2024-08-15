@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -62,24 +63,9 @@ h1 {
     margin-top: 20px;
 }
 
-#musicButton {
-    background-color: #3498db; /* Style for the music button */
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 12px;
-    transition: background-color 0.3s ease;
-}
-
-#musicButton:hover {
-    background-color: #2980b9; /* Darker shade for hover effect */
-}
-
+#musicButton,
 #nextPageButton {
-    background-color: #3498db; /* Style for the Next button */
+    background-color: #3498db; /* Style for buttons */
     color: white;
     padding: 10px 20px;
     text-align: center;
@@ -90,10 +76,50 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
+#musicButton:hover,
 #nextPageButton:hover {
     background-color: #2980b9; /* Darker shade for hover effect */
 }
 
 audio {
     display: none; /* Hide audio player */
+}
+
+/* Media Queries */
+@media only screen and (max-width: 320px) {
+    h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .country p {
+        font-size: 1rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #musicButton,
+    #nextPageButton {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .country p {
+        font-size: 1.1rem;
+    }
+
+    #musicButton,
+    #nextPageButton {
+        padding: 10px 18px;
+        font-size: 15px;
+    }
 }
